@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the Antergos LogServer
+
+  // Wrapper
+  #wrapper
+
+    // LOG LIST
+    h2 Log List
+    #logList
+      table
+        thead
+          th Timestamp
+          // th Delete?
+        tbody
+    // /LOG LIST
+
+    // LOG INFO
+    #logInfo
+      h2 Log Info
+      p
+        strong Output:
+        br
+        |  <span id='logOutput'></span>
+    // /LOG INFO
+
+  // /WRAPPER
