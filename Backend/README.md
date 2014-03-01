@@ -1,7 +1,7 @@
 LogServer
 =========
 
-Antergos LogServer FrontEnd
+Antergos LogServer BackEnd
 
 # Dependencies
 * mongodb
