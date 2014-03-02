@@ -4,7 +4,7 @@
 
 exports.logs = function(db) {
   return function(req, res) {
-    db.collection('logs').find().toArray(function (err, items) {
+    db.collection('logs').find().sort({log_timestamp:-1}).limit(20).toArray(function (err, items) {
       res.json(items);
     })
   }

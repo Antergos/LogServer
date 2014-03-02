@@ -44,7 +44,8 @@ function populateTable() {
 
 // Show Log Info
 function showLogInfo(event) {
-
+  $('#flag_holder').removeClass();
+  $('#flag_holder').addClass('flag');
   // Prevent Link from Firing
   event.preventDefault();
 
@@ -59,6 +60,8 @@ function showLogInfo(event) {
 
   //Populate Info Box
   $('#logOutput').html(thisLogObject.log_data.replace(/\r\n|\n|\r/gm, '<br />'));
+  $('#client_ip').text(thisLogObject.client_ip);
+  $('#flag_holder').addClass('flag-' + thisLogObject.ip_location.toLowerCase());
 };
 
 

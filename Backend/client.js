@@ -3,9 +3,23 @@ var fs = require('fs');
 
 
 var PORT = 9001;
-var HOST = '82.192.75.147';
+var HOST = '127.0.0.1';
 var FILEPATH = 'file.txt';
 
+process.argv.forEach(function (val, index, array) {
+  if(index == '2'){
+    if(val.substring(0,7) == '--host='){
+      HOST = val.substring(7);
+    }else{
+      if(val.substring(0,7) == '--file='){
+        FILEPATH = val.substring(7);
+      }
+    }
+  }
+  if(index == '3'){
+    FILEPATH = val.substring(7);
+  }
+});
 var client = new net.Socket()
 
 //connect to the server
